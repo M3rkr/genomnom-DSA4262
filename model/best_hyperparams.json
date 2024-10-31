@@ -1,0 +1,12 @@
+{
+    "lr": 0.0009245496016056897,
+    "batch_size": 64,
+    "num_layers": 5,
+    "hidden_size": 295,
+    "dropout_rate": 0.4590448978628149,
+    "optimizer": "Adam",
+    "weight_decay": 5.384616980100307e-06,
+    "scheduler": "StepLR",
+    "step_size": 11,
+    "gamma": 0.33196564416834123
+}
