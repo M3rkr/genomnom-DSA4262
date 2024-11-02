@@ -13,46 +13,6 @@ This repository is designed for genomic data processing, model training, and eva
 - Model Files
 - Results and Visualizations
 
-## Project Structure
-
-genomnom-DSA4262/
-├── README.md
-├── main.py
-├── requirements.txt
-├── data/
-│   ├── training/
-│   │   ├── dataset0.json(need to add manually)
-│   │   └── data.info.labelled
-│   └── prediction/
-│       ├── dataset0_prediction.csv
-│       ├── dataset1_prediction.csv
-│       └── dataset2_prediction.csv
-├── graphs/
-│   ├── feature_importances.png
-│   ├── pr_curve.png
-│   ├── roc_curve.png
-│   └── training_progress.png
-├── model/
-│   ├── aggregated_data_selected.csv
-│   ├── best_aggregated_model.pth
-│   ├── best_hyperparams.json
-│   ├── feature_selector.pkl
-│   ├── label_encoder_5mer.pkl
-│   ├── minmax_scaler.pkl
-│   └── training_log.json
-├── scripts/
-│   ├── data_preprocessing.py
-│   ├── evaluation.py
-│   ├── feature_selection.py
-│   ├── inference.py
-│   ├── model_training.py
-│   ├── visualization.py
-│   └── misc.ipynb
-└── utils/
-├── dataset.py
-└── utils.py
-
-
 ### Key Files and Folders
 
 - **data/**: Holds training data, labeled data, and prediction outputs.
@@ -66,16 +26,15 @@ genomnom-DSA4262/
 
 1. **Clone the repository**:
 
-    ```bash
-    git clone https://github.com/M3rkr/genomnom-DSA4262.git
-    cd genomnom-DSA4262
-    ```
-
+   ```bash
+   git clone https://github.com/M3rkr/genomnom-DSA4262.git
+   cd genomnom-DSA4262
+   ```
 2. **Install dependencies**:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
