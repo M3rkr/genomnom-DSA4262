@@ -38,6 +38,8 @@ genomnom-DSA4262/
 │   │   └── data.info.labelled
 │   └── prediction/
 │       ├── dataset0.json          # **Need to add manually**
+│       ├── dataset1.json          # **Need to add manually**
+│       ├── dataset2.json          # **Need to add manually**
 │       ├── dataset0_prediction.csv
 │       ├── dataset1_prediction.csv
 │       └── dataset2_prediction.csv
@@ -80,17 +82,16 @@ genomnom-DSA4262/
 ## Setup and Installation
 
 1. **Clone the repository**:
-
-    ```bash
-    git clone https://github.com/M3rkr/genomnom-DSA4262.git
-    cd genomnom-DSA4262
-    ```
-
+   
+   ```bash
+   git clone https://github.com/M3rkr/genomnom-DSA4262.git
+   cd genomnom-DSA4262
+   ```
 2. **Install dependencies**:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
+   
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
@@ -103,7 +104,6 @@ Before starting the pipeline, ensure that `dataset0.json` is placed in both the 
   ```plaintext
   data/training/dataset0.json
   ```
-
 - **Place `dataset0.json`, `dataset1.json`, and `dataset2.json` in `data/prediction/`**:
   
   ```plaintext
@@ -248,3 +248,4 @@ The `graphs/` folder contains:
 ---
 
 **Note**: Ensure that `dataset0.json` is correctly placed in both `data/training/` and `data/prediction/` directories, and `dataset1.json` and `dataset2.json` are placed in the `data/prediction/` directory before initiating the pipeline to avoid any runtime issues.
+
