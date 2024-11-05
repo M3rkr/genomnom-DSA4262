@@ -1,6 +1,6 @@
 # Genomnom-DSA4262
 
-This repository is designed for genomic data processing, model training, and evaluation as part of the DSA4262 project. It offers scripts for data preparation, feature selection, model training, predictions, and result visualization.
+This repository is designed for genomic data processing, model training, and evaluation as part of the NUS DSA4262 m6A modified site detection project. It offers scripts for data preparation, feature selection, model training, predictions, and result visualization.
 
 ## Table of Contents
 
@@ -40,9 +40,7 @@ genomnom-DSA4262/
 │       ├── dataset0.json          # **Need to add manually**
 │       ├── dataset1.json          # **Need to add manually**
 │       ├── dataset2.json          # **Need to add manually**
-│       ├── dataset0_prediction.csv
-│       ├── dataset1_prediction.csv
-│       └── dataset2_prediction.csv
+│       └── sample.json
 ├── graphs/
 │   ├── feature_importances.png
 │   ├── pr_curve.png
@@ -87,7 +85,21 @@ genomnom-DSA4262/
    git clone https://github.com/M3rkr/genomnom-DSA4262.git
    cd genomnom-DSA4262
    ```
-2. **Install dependencies**:
+
+2. **Install Python (if not already installed)**:
+
+   - On Ubuntu:
+     ```bash
+     sudo apt update
+     sudo apt install python3
+     ```
+
+   - On macOS (using Homebrew):
+     ```bash
+     brew install python
+     ```
+
+3. **Install dependencies**:
    
    ```bash
    pip install -r requirements.txt
@@ -117,7 +129,7 @@ Before starting the pipeline, ensure that `dataset0.json` is placed in both the 
 To preprocess the data, use:
 
 ```bash
-python scripts/data_preprocessing.py
+python3 scripts/data_preprocessing.py
 ```
 
 **Inputs**:
@@ -134,7 +146,7 @@ python scripts/data_preprocessing.py
 To train the model and optimize hyperparameters:
 
 ```bash
-python scripts/model_training.py
+python3 scripts/model_training.py
 ```
 
 **Inputs**:
@@ -152,7 +164,7 @@ python scripts/model_training.py
 To run inference on new data:
 
 ```bash
-python scripts/inference.py --input_file data/prediction/datasetX.json --output_file data/prediction/datasetX_prediction.csv
+python3 scripts/inference.py --input_file data/prediction/datasetX.json --output_file data/prediction/datasetX_prediction.csv
 ```
 
 **Inputs**:
@@ -168,7 +180,7 @@ python scripts/inference.py --input_file data/prediction/datasetX.json --output_
 To evaluate model performance:
 
 ```bash
-python scripts/evaluation.py
+python3 scripts/evaluation.py
 ```
 
 **Outputs**:
@@ -182,7 +194,7 @@ python scripts/evaluation.py
 To plot training progress:
 
 ```bash
-python scripts/visualization.py
+python3 scripts/visualization.py
 ```
 
 **Outputs**:
@@ -194,7 +206,7 @@ python scripts/visualization.py
 To run the entire pipeline, execute:
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 ## Pipeline Overview
