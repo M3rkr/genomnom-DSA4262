@@ -80,27 +80,26 @@ genomnom-DSA4262/
 ## Setup and Installation
 
 1. **Clone the repository**:
-   
+
    ```bash
    git clone https://github.com/M3rkr/genomnom-DSA4262.git
    cd genomnom-DSA4262
    ```
-
 2. **Install Python (if not already installed)**:
 
    - On Ubuntu:
+
      ```bash
      sudo apt update
      sudo apt install python3
      ```
-
    - On macOS (using Homebrew):
+
      ```bash
      brew install python
      ```
-
 3. **Install dependencies**:
-   
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -112,52 +111,17 @@ genomnom-DSA4262/
 Before starting the pipeline, ensure that `dataset0.json` is placed in both the `data/training/` and `data/prediction/` directories, and `dataset1.json` and `dataset2.json` are placed in the `data/prediction/` directory.
 
 - **Place `dataset0.json` in `data/training/`**:
-  
+
   ```plaintext
   data/training/dataset0.json
   ```
 - **Place `dataset0.json`, `dataset1.json`, and `dataset2.json` in `data/prediction/`**:
-  
+
   ```plaintext
   data/prediction/dataset0.json
   data/prediction/dataset1.json
   data/prediction/dataset2.json
   ```
-
-### Data Preprocessing
-
-To preprocess the data, use:
-
-```bash
-python3 scripts/data_preprocessing.py
-```
-
-**Inputs**:
-
-- `data/training/dataset0.json`: Raw training data in JSON format.
-- `data/training/data.info.labelled`: Label information for training data.
-
-**Outputs**:
-
-- `model/aggregated_data.csv`: Aggregated and encoded data ready for feature selection and training.
-
-### Model Training
-
-To train the model and optimize hyperparameters:
-
-```bash
-python3 scripts/model_training.py
-```
-
-**Inputs**:
-
-- `model/aggregated_data_selected.csv`: Data selected for training after feature selection.
-
-**Outputs**:
-
-- `model/best_aggregated_model.pth`: Trained model with the best parameters.
-- `model/best_hyperparams.json`: Hyperparameters of the best model.
-- `model/training_log.json`: Training progress log.
 
 ### Inference
 
@@ -175,31 +139,6 @@ python3 scripts/inference.py --input_file data/prediction/datasetX.json --output
 
 - `data/prediction/datasetX_prediction.csv`: Prediction scores.
 
-### Evaluation
-
-To evaluate model performance:
-
-```bash
-python3 scripts/evaluation.py
-```
-
-**Outputs**:
-
-- `graphs/roc_curve.png`: ROC curve.
-- `graphs/pr_curve.png`: Precision-Recall curve.
-- Console output of performance metrics.
-
-### Visualization
-
-To plot training progress:
-
-```bash
-python3 scripts/visualization.py
-```
-
-**Outputs**:
-
-- `graphs/training_progress.png`: Graph of training progress for ROC-AUC and PR-AUC over epochs.
 
 ### Full Pipeline
 
@@ -260,4 +199,3 @@ The `graphs/` folder contains:
 ---
 
 **Note**: Ensure that `dataset0.json` is correctly placed in both `data/training/` and `data/prediction/` directories, and `dataset1.json` and `dataset2.json` are placed in the `data/prediction/` directory before initiating the pipeline to avoid any runtime issues.
-
